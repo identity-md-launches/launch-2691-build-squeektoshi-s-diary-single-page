@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f8f5e9" />
+    <title>Squeektoshi’s Diary · A little wheel, a little world</title>
+    <meta name="description" content="A quiet little window into Squeektoshi’s day. Follow the runs, rests and wheel passes behind Squeekchain, the hamster-powered proof-of-work chain on Sepolia." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Squeektoshi’s Diary" />
+    <meta property="og:description" content="Runs, naps and tiny footsteps. A diary of the hamster behind Squeekchain." />
+    <meta property="og:image" content="./assets/social-card.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <script type="module" src="./src/main.ts"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#diary">Skip to the diary</a>
+    <header class="site-header page-width">
+      <a class="brand" href="#today" aria-label="Squeektoshi’s Diary, back to today">
+        <img src="./assets/favicon.svg" width="38" height="38" alt="" />
+        <span>Squeektoshi’s Diary<span class="brand-note">Small paws. A day at a time.</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#diary" class="nav-link">The diary</a>
+        <a href="#chain" class="nav-link">The chain</a>
+        <a href="https://squeekchain.com/genesis" target="_blank" rel="noopener noreferrer" class="genesis-link">Squeekchain <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="today" class="page-width">
+      <div class="today-topline">
+        <p>A hamster’s day, on the record.</p>
+        <time id="today-date"></time>
+      </div>
+      <section class="today-panel" aria-labelledby="status-heading">
+        <div class="today-content">
+          <div class="status-row"><span class="status-dot" id="status-dot"></span><span id="live-label">Checking in</span><span class="network-label">Sepolia</span></div>
+          <h1 id="status-heading">Checking in on<br />Squeektoshi<span class="heading-dot">.</span></h1>
+          <p id="status-description" class="status-description">A little window into the hamster behind Squeekchain.</p>
+          <dl class="live-numbers">
+            <div><dt>Wheel speed</dt><dd><span id="rpm">–</span><span class="unit">RPM</span></dd></div>
+            <div><dt>On the move</dt><dd><span id="speed">–</span><span class="unit">cm/s</span></dd></div>
+            <div><dt>Distance, all time</dt><dd><span id="distance">–</span><span class="unit">km</span></dd></div>
+          </dl>
+          <div class="update-row">
+            <p id="update-info">Live wheel data · refreshes every 15s</p>
+            <button class="refresh-button" id="refresh" type="button" aria-label="Refresh diary data" title="Refresh diary data"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5M6.1 7a7 7 0 0 1 11.7-1L20 9M4 15l2.2 3A7 7 0 0 0 18 17"/></svg></button>
+          </div>
+        </div>
+        <div class="hamster-scene" id="hamster-scene" data-phase="unknown">
+          <span class="scene-star star-one" aria-hidden="true">✧</span><span class="scene-star star-two" aria-hidden="true">✧</span>
+          <div class="scene-label" id="scene-label">A moment in his day</div>
+          <svg class="wheel-art" viewBox="0 0 360 245" role="img" aria-labelledby="hamster-title">
+            <title id="hamster-title">Squeektoshi, a tiny pixel hamster beside his wheel</title>
+            <g fill="none" stroke="#35382b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M204 197l-14 26h111l-15-26M248 134v87" fill="#dce3bb"/>
+              <circle cx="248" cy="113" r="86" fill="#eff1d9"/>
+              <g class="wheel-spokes"><circle cx="248" cy="113" r="74" stroke="#a7b77f" stroke-width="2"/><path d="M248 39v148M174 113h148M196 61l104 104M196 165L300 61" stroke="#b6c493" stroke-width="2"/></g>
+              <circle cx="248" cy="113" r="7" fill="#f8f5e9"/>
+              <path d="M28 225h304" stroke="#a3ad82" stroke-width="2"/>
+            </g>
+            <g class="hamster-pixel" shape-rendering="crispEdges">
+              <path d="M43 177h7v-14h7v-7h14v-7h21v7h14v-7h21v7h7v7h7v14h7v28h-7v7h-14v7H64v-7H50v-7h-7z" fill="#35382b"/>
+              <path d="M50 177h7v-14h14v-7h14v14h28v-14h14v7h7v14h7v28h-14v7H64v-7H50z" fill="#cd915d"/>
+              <path d="M64 163h14v7H64zm56 0h7v7h-7z" fill="#e8b6a2"/>
+              <path d="M57 191h14v-7h14v-7h28v7h14v7h7v14h-14v7H71v-7H57z" fill="#f9e9c7"/>
+              <g class="awake-eyes" fill="#35382b"><path d="M78 184h7v7h-7zm35 0h7v7h-7z"/></g>
+              <g class="sleep-eyes" fill="#35382b"><path d="M71 184h7v7h14v-7h-7v-7h-7v7zm35 0h7v7h14v-7h-7v-7h-7v7z"/></g>
+              <path d="M92 191h14v7H92z" fill="#ab6555"/>
+              <path class="hamster-feet" d="M64 212h14v7H64zm49 0h14v7h-14z" fill="#35382b"/>
+              <path d="M57 191h14v7H57zm63 0h14v7h-14z" fill="#e3aa91"/>
+            </g>
+            <g class="sleep-marks" fill="#586744" font-family="sans-serif" font-size="18" font-weight="600"><text x="117" y="136">z</text><text x="138" y="114">z</text><text x="157" y="88">z</text></g>
+            <g class="seed-art" fill="#c4a570" stroke="#35382b" stroke-width="2"><path d="M172 216q11-20 17 0-9 7-17 0z"/><path d="M178 219l4-11"/></g>
+          </svg>
+          <p class="scene-caption" id="scene-caption">His wheel. His pace.</p>
+          <button type="button" id="motion-toggle" class="motion-toggle" aria-pressed="false" aria-label="Pause hamster animation" title="Pause hamster animation"><span aria-hidden="true">Ⅱ</span></button>
+        </div>
+      </section>
+      <div class="connection-row"><p class="offline-badge" id="offline-badge" role="status" aria-live="polite" hidden></p><p class="sr-only" id="announcements" role="status" aria-live="polite"></p></div>
+
+      <section class="diary-section" id="diary" aria-labelledby="diary-heading">
+        <div class="section-heading">
+          <div><h2 id="diary-heading">The rhythm of his days</h2><p>Some wheel time. Plenty of downtime.</p></div>
+          <div class="range-control" role="group" aria-label="Diary date range"><button type="button" data-range="7" aria-pressed="true">7 days</button><button type="button" data-range="30" aria-pressed="false">30 days</button></div>
+        </div>
+        <div class="heatmap-panel">
+          <div class="heatmap-top"><p id="heatmap-range">Loading the diary…</p><span class="utc-label" title="All dates and hours use UTC. Hover a time to see your local time.">Hours in UTC</span></div>
+          <p class="heatmap-hint" id="heatmap-instructions">Select a square to read that moment. Use arrow keys to explore.</p>
+          <div class="heatmap-scroll"><div id="heatmap" class="heatmap" role="grid" aria-label="Wheel passes by day and UTC hour" aria-describedby="heatmap-instructions"></div></div>
+          <div class="heatmap-bottom"><span>Hatched squares share a bucket total</span><div class="heatmap-legend"><span>Quiet</span><i data-level="0"></i><i data-level="1"></i><i data-level="2"></i><i data-level="3"></i><i data-level="4"></i><span>More passes</span></div></div>
+          <div class="cell-detail" id="cell-detail" role="status" aria-live="polite"><span class="detail-icon" aria-hidden="true">↖</span><p>Select an hour for its exact observation.</p></div>
+        </div>
+        <details class="data-note" id="heatmap-method"><summary>How to read this diary</summary><div><p>A pass is one recorded wheel work unit. Solid squares are hourly observations; hatched squares share a larger bucket total. Their colour shows the bucket’s average passes per hour, not an exact hourly count.</p><p>The API currently provides hourly data for 24 hours, six-hour buckets for 7 days, and noon-to-noon daily buckets for 30 days. Exact hourly history is unavailable outside the detailed feed. Dashed outlines mean no recorded observation; future hours are empty.</p><p>“Active” means a recorded interval with passes, not continuous running. Quiet hours don’t prove sleep. Activity and stretch ranges give conservative lower and upper bounds within observed, completed hours. Missing hours are excluded. The record is the longest directly observed hourly stretch; older grouped data may hide a longer one. Settlements can lag behind the wheel.</p></div></details>
+      </section>
+
+      <section class="entries-section" id="entries" aria-labelledby="entries-heading">
+        <div class="section-heading"><div><h2 id="entries-heading">Dear diary,</h2><p>Seven little chapters from the wheel.</p></div><span class="section-side-note">Latest first · UTC</span></div>
+        <div id="daily-entries" class="daily-entries" aria-busy="true"></div>
+      </section>
+
+      <section class="records-section" aria-labelledby="records-heading">
+        <div class="section-heading"><div><h2 id="records-heading">Little milestones</h2><p>From the last 7 days. Every day has its own pace.</p></div></div>
+        <div id="records" class="records-grid"></div>
+      </section>
+
+      <section class="chain-section" id="chain" aria-labelledby="chain-heading">
+        <div class="section-heading"><div><h2 id="chain-heading">A tiny part of something bigger</h2><p>His wheel helps power Squeekchain’s proof of work.</p></div><span class="chain-network"><span class="status-dot"></span>Sepolia testnet</span></div>
+        <div class="chain-grid">
+          <div class="chain-stat"><div class="chain-stat-heading"><h3>Squeek block</h3><span aria-hidden="true">▧</span></div><p id="block-height" class="chain-number">–</p><div class="progress-label"><span>Progress to next block</span><span id="block-percent">–</span></div><progress id="block-progress" max="100" value="0" aria-label="Progress to next Squeek block"></progress></div>
+          <div class="chain-stat"><div class="chain-stat-heading"><h3>SQK minted</h3><span aria-hidden="true">◉</span></div><p id="sqk-minted" class="chain-number">–</p><div class="progress-label"><span id="sqk-cap">Supply cap unavailable</span><span id="sqk-percent">–</span></div><progress id="sqk-progress" max="100" value="0" aria-label="SQK minted as a percentage of supply cap"></progress></div>
+          <div class="chain-links"><span class="chain-link-art" aria-hidden="true">↗</span><h3>Follow the bigger picture</h3><a href="https://sepolia.squeekchain.com/status" target="_blank" rel="noopener noreferrer">Official chain status <span aria-hidden="true">↗</span></a><a href="https://squeekchain.com/genesis" target="_blank" rel="noopener noreferrer">Squeekchain Genesis <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+      <aside class="nap-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14A8.7 8.7 0 0 1 10 3.5 8.8 8.8 0 1 0 20.5 14Z"/></svg><p>A good day includes a good nap.<span>This diary observes. Squeektoshi sets the pace.</span></p></aside>
+    </main>
+    <footer class="site-footer page-width"><p>Built for Squeekchain Genesis by <a href="https://x.com/xiligeweb3" target="_blank" rel="noopener noreferrer">@xiligeweb3</a></p><p>Public data. Small paws. No pressure.</p><a href="#today" class="back-top">Back to top <span aria-hidden="true">↑</span></a></footer>
+    <noscript><p class="noscript-message">This diary needs JavaScript to read Squeekchain’s public data. You can also visit <a href="https://sepolia.squeekchain.com/status">the official status page</a>.</p></noscript>
+  </body>
+</html>

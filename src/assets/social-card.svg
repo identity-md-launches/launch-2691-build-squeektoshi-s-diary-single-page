@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8f5e9"/>
+  <rect x="40" y="40" width="1120" height="550" rx="28" fill="#fffcf3" stroke="#424939" stroke-width="2"/>
+  <path d="M790 41h342q27 0 27 27v494q0 27-27 27H790z" fill="#e9edce"/>
+  <path d="M790 41v548" stroke="#424939" stroke-width="2"/>
+  <g fill="#30372c"><text x="90" y="122" font-family="Arial,sans-serif" font-size="22" font-weight="600">A hamster’s day, on the record.</text><text x="86" y="251" font-family="Georgia,serif" font-size="76" font-weight="600">Squeektoshi’s</text><text x="86" y="340" font-family="Georgia,serif" font-size="76" font-weight="600">Diary<tspan fill="#ac7746">.</tspan></text><text x="90" y="407" font-family="Arial,sans-serif" font-size="24" fill="#646958">Runs, naps and tiny footsteps.</text><text x="90" y="446" font-family="Arial,sans-serif" font-size="24" fill="#646958">The little life behind Squeekchain.</text><text x="90" y="540" font-family="Arial,sans-serif" font-size="18">Squeekchain Genesis · @xiligeweb3</text></g>
+  <g fill="none" stroke="#35382b" stroke-width="4"><circle cx="1010" cy="262" r="111" fill="#eff1d9"/><circle cx="1010" cy="262" r="94" stroke="#a7b77f" stroke-width="2"/><path d="M1010 168v188m-94-94h188m-160-66 132 132m-132 0 132-132" stroke="#b6c493" stroke-width="2"/><path d="M1010 269v165m-20-46-25 46h92l-25-46"/><circle cx="1010" cy="262" r="8" fill="#fffcf3"/><path d="M835 435h290" stroke="#a3ad82" stroke-width="2"/></g>
+  <g transform="translate(827 337) scale(2.4)" shape-rendering="crispEdges"><path d="M0 12h3V3h9v6h3V3h9v9h3v21h-3v3H3v-3H0z" fill="#35382b"/><path d="M3 12h3V6h3v6h9V6h3v6h3v21H3z" fill="#cd915d"/><path d="M6 21h3v-6h9v6h3v12H6z" fill="#f9e9c7"/><path d="M6 18h3v3h3v-3H9v-3H6zm12 0h3v3h3v-3h-3v-3h-3z" fill="#35382b"/><path d="M12 24h6v3h-6z" fill="#ab6555"/></g>
+  <g fill="#586744" font-family="Arial,sans-serif" font-size="26"><text x="880" y="311">z</text><text x="904" y="279">z</text><text x="929" y="245">z</text></g>
+  <text x="867" y="508" fill="#526044" font-family="Arial,sans-serif" font-size="20">His wheel. His pace.</text>
+</svg>

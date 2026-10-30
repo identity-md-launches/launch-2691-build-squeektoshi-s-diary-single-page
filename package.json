@@ -1,0 +1,21 @@
+{
+  "name": "squeektoshis-diary",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:browser": "node tests/browser.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.0",
+    "playwright": "1.56.1",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "vite": "6.4.5"
+  }
+}
